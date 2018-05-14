@@ -31,4 +31,4 @@ import Slide from './Slide';
 ```
 
 ## Demo
-![screenshot](https://github.com/AhmedGMurtaza/react-widgets/blob/master/horizontal-slider/demo.PNG)
+![screenshot](https://github.com/AhmedGMurtaza/react-responsive-image-slider/blob/master/demo.PNG)
