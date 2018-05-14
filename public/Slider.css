@@ -1,0 +1,80 @@
+/*
+ Plugin Styles
+*/
+/* slider */
+.horizontal-slider {
+  width: 850px;
+  margin: 0 auto; }
+
+.slides-container {
+  width: 850px;
+  height: 350px;
+  margin: 0 auto;
+  overflow: hidden; }
+  .slides-container__wrapper {
+    display: flex;
+    position: relative;
+    transition: 0.5s cubic-bezier(0.4, 0, 1, 1); }
+  .slides-container .wrapper__slide {
+    position: relative;
+    width: 850px;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  .slides-container .slide__cover-container {
+    position: relative;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1; }
+    .slides-container .slide__cover-container img {
+      width: 100%; }
+  .slides-container .slide__content {
+    color: #ffffff;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    z-index: 10;
+    text-shadow: 2px 2px 10px #000000;
+    padding: 20px;
+    font-size: 22px;
+    box-sizing: border-box; }
+
+/* Slider Controls */
+.controls {
+  margin-top: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between; }
+  .controls .btn {
+    background-color: #f5b52a;
+    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 3px;
+    outline: 0;
+    border: 0;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+    cursor: pointer; }
+    .controls .btn:first-child {
+      margin-right: 5px; }
+    .controls .btn:active {
+      background-color: #e49f0c; }
+  .controls__bubbles {
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .controls__bubbles .bubble {
+      height: 10px;
+      width: 10px;
+      border-radius: 50%;
+      background: #cccccc;
+      margin-right: 5px; }
+      .controls__bubbles .bubble.current {
+        background: #474747; }
+
+/*
+ Plugin Styles Ended
+*/

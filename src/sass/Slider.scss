@@ -1,0 +1,108 @@
+/*
+ Plugin Styles
+*/
+
+$slide-width: 850px;
+$slide-height: 350px;
+$content-color:#ffffff;
+
+/* slider */
+
+.horizontal-slider {
+    width: 850px;
+    margin: 0 auto;
+}
+
+.slides-container {
+    width: $slide-width;
+    height: 350px;
+    margin: 0 auto;
+    overflow: hidden;
+    &__wrapper {
+        display: flex;
+        position: relative;
+        transition: .5s cubic-bezier(0.4, 0.0, 1, 1);
+    }
+    .wrapper {
+        &__slide {
+            position: relative;
+            width: $slide-width;
+            height: $slide-height;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+    .slide {
+        &__cover-container {
+            position: relative;
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            z-index: 1;
+            img {
+                width: 100%;
+            }
+        }
+        &__content {
+            color: $content-color;
+            height: 100%;
+            width: 100%;
+            position: relative;
+            z-index: 10;
+            text-shadow: 2px 2px 10px #000000;
+            padding: 20px;
+            font-size: 22px;
+            box-sizing: border-box;
+        }
+    }
+}
+
+
+/* Slider Controls */
+
+.controls {
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    .btn {
+        background-color: rgb(245, 181, 42);
+        font-size: 16px;
+        padding: 10px 20px;
+        border-radius: 3px;
+        outline: 0;
+        border: 0;
+        box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+        cursor: pointer;
+        font-weight: bold;
+        &:first-child {
+            margin-right: 5px;
+        }
+        &:active {
+            background-color: rgb(228, 159, 12);
+        }
+    }
+    &__bubbles {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .bubble {
+            height: 10px;
+            width: 10px;
+            border-radius: 50%;
+            background: darken($content-color, 20%);
+            margin-right: 5px;
+            &.current {
+                background: darken($content-color, 72%);
+            }
+        }
+    }
+}
+
+
+/*
+ Plugin Styles Ended
+*/
