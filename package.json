@@ -1,5 +1,5 @@
 {
-  "name": "horizontal-slider",
+  "name": "react-responsive-slider",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -17,5 +17,7 @@
   },
   "devDependencies": {
     "gulp-sass": "^3.1.0"
-  }
+  },
+  "keywords": ["javascript", "plugin", "react", "slider", "web"],
+  "description": "React responsive slider plugin"
 }
