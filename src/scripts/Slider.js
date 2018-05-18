@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from "react";
+import React, { Component } from "react";
 import Controls from "./Controls";
 import PropTypes from "prop-types";
 
@@ -8,6 +8,16 @@ class Slider extends Component {
     currentSlide: 1,
     slidesCount: this.props.children.length
   };
+
+  bubbleSlideTransition = (slideNo) => {
+    this.setState((prevState,nextProps)=>{
+      return {
+        currentSlide: slideNo
+      }
+    },()=>{
+      console.log('slide done');
+    })
+  }
 
   handleSlide = mode => {
     const { currentSlide, slidesCount } = this.state;
@@ -28,6 +38,7 @@ class Slider extends Component {
 
   render() {
     const { wrapperWidth, slidesCount, currentSlide } = this.state;
+    const { handleSlide, bubbleSlideTransition } = this;
     const { children } = this.props;
     const wrapperStyles = {
       width: `${wrapperWidth * slidesCount}px`,
@@ -36,15 +47,16 @@ class Slider extends Component {
 
     return (
       <div className="horizontal-slider">
-        <div className="slides-container">
+        <div className="slides-container" onClick={this.slideTransition}>
           <div className="slides-container__wrapper" style={wrapperStyles}>
             {children}
           </div>
         </div>
         <Controls
-          onSliding={this.handleSlide}
+          onSliding={handleSlide}
           slidesCount={slidesCount}
           currentSlide={currentSlide}
+          bubbleTransition={bubbleSlideTransition}
         />
       </div>
     );
